@@ -1,0 +1,41 @@
+#answer {
+	display: none;
+}
+body {
+	background: #eeeeee;
+	text-align: center;
+	font-family: sans-serif;
+}
+p {
+	font-size: 19px;
+}
+pre {
+	margin: 21px auto;
+	width: 386px;
+	padding: 28px;
+	background: #eeeeee;
+	border: 2px #eeeeee;
+	font-size: 17px;
+	font-color: black;
+	font-family: sans-serif;
+	text-align: left;
+}
+input[type="number"] {
+	width: 70px;
+	text-align: right;
+}
+input[type="number"] {
+	width: 70px;
+	text-align: right;
+}
+input[type="button"] {
+	background: #009f00;
+	border: none;
+	padding: 11px 36px;
+	font-size: 21px;
+	color: white;
+	border-radius: 7px;
+}
+input[type="button"]:hover {
+	opacity: 0.7;
+}

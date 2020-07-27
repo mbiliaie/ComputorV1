@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Classical quad equation</title>
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<img src="./pictures/logo.jpeg" alt="image of quadratic formula">
+	<h2>Initial data:</h2>
+	<p>A classical (standard form) quadratic equation - is an equation of the form</p>
+	<p>a*x<sup>2</sup> + b*x + c = 0, where coefficients а, b, с are arbitrary numbers & а != 0.</p>
+
+	<form action="">
+		<input type="number" id = "a" placeholder="a"> * x<sup>2</sup> +
+		<input type="number" id = "b" placeholder="b"> * x +
+		<input type="number" id = "c" placeholder="c"> = 0
+		<br><br><input type="button" value="Solve!" onclick="prog();">
+	</form>
+	<div id="answer">
+		<hr>
+		<h2>Result:</h2>
+		<pre id="result"></pre>
+		<hr>
+		<img src="./pictures/giphy.gif" alt="gif img with zac & math">
+	</div>
+	<script src="mini.js" type="text/javascript"></script>
+</body>
+</html>

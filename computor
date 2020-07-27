@@ -1,0 +1,58 @@
+#!/bin/sh
+
+#flags list
+USAGE="--usage"
+HELP="--help"
+COLORW="--colorw"
+COLORB="--colorb"
+WIKI="--wiki"
+DET="--det"
+NAT="--nat"
+WEB="--web"
+REDOCS="--redocs"
+
+#sources paths
+FILEQUAD=./computordocs/quad.txt
+FILEHELP=./computordocs/help.txt
+SOURCE=https://github.com/mbiliaie/computordocs.git
+
+if [ "$1" = "$USAGE" ]; then
+	node ./source/computor.js "--usage"
+elif [ "$1" = "$HELP" ]
+then
+	if [ -f "$FILEHELP" ]; then
+		node ./source/computor.js "--help"
+	else git clone --quiet "$SOURCE"
+		node ./source/computor.js "--help"
+	fi
+elif [ "$1" = "$REDOCS" ]
+then
+	rm -rf computordocs
+	git clone --quiet "$SOURCE"
+	echo "The latest versions of docs for --help & --usage flags have been downloaded"
+elif [ "$1" = "$COLORW" ]
+then
+	node ./source/computor.js "--colorw" "$2"
+elif [ "$1" = "$COLORB" ]
+then
+	node ./source/computor.js "--colorb" "$2"
+elif [ "$1" = "$DET" ]
+then
+	node ./source/computor.js "--det" "$2" 
+elif [ "$1" = "$NAT" ]
+then
+	node ./source/computor.js "--nat" "$2"
+elif [ "$1" = "$WEB" ]
+then
+	open ./source/index.html
+	exit
+elif [ "$1" = "$WIKI" ]
+then
+	if [ -f "$FILEQUAD" ]; then
+		node ./source/computor.js "--wiki"
+	else git clone --quiet "$SOURCE"
+   		node ./source/computor.js "--wiki"
+	fi
+else
+	node ./source/computor.js "$1"
+fi
